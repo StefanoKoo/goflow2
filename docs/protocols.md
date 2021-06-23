@@ -17,7 +17,7 @@ The mapping to the protobuf format is listed in the table below.
 |FlowDirection|Direction of the flow| | |DIRECTION (61)|flowDirection (61)|
 |SamplerAddress|Address of the device that generated the packet|IP source of packet|Agent IP|IP source of packet|IP source of packet|
 |TimeFlowStart|Time the flow started|System uptime and first|=TimeReceived|System uptime and FIRST_SWITCHED (22)|flowStartXXX (150, 152, 154, 156)|
-|TimeFlowEnd|Time the flow ended|System uptime and last|=TimeReceived|System uptime and LAST_SWITCHED (23)|flowEndXXX (151, 153, 155, 157)|
+|TimeFlowEnd|Time the flow ended|System uptime and last|=TimeReceived|System uptime and LAST_SWITCHED (21)|flowEndXXX (151, 153, 155, 157)|
 |Bytes|Number of bytes in flow|dOctets|Length of sample|IN_BYTES (1) OUT_BYTES (23)|octetDeltaCount (1) postOctetDeltaCount (23)|
 |Packets|Number of packets in flow|dPkts|=1|IN_PKTS (2) OUT_PKTS (24)|packetDeltaCount (1) postPacketDeltaCount (24)|
 |SrcAddr|Source address (IP)|srcaddr (IPv4 only)|Included|Included|IPV4_SRC_ADDR (8) IPV6_SRC_ADDR (27)|sourceIPv4Address/sourceIPv6Address (8/27)|
@@ -30,7 +30,7 @@ The mapping to the protobuf format is listed in the table below.
 |OutIf|Output interface|output|Included|OUTPUT_SNMP (14)|egressInterface (14)|
 |SrcMac|Source mac address| |Included|IN_SRC_MAC (56)|sourceMacAddress (56)|
 |DstMac|Destination mac address| |Included|OUT_DST_MAC (57)|postDestinationMacAddress (57)|
-|SrcVlan|Source VLAN ID| |From ExtendedSwitch|SRC_VLAN (59)|vlanId (58)|
+|SrcVlan|Source VLAN ID| |From ExtendedSwitch|SRC_VLAN (58)|vlanId (58)|
 |DstVlan|Destination VLAN ID| |From ExtendedSwitch|DST_VLAN (59)|postVlanId (59)|
 |VlanId|802.11q VLAN ID| |Included|SRC_VLAN (59)|postVlanId (59)|
 |IngressVrfID|VRF ID| | | |ingressVRFID (234)| 
